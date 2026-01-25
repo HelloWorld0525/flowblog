@@ -1,0 +1,23 @@
+# --- 通用 ---
+.DS_Store
+*.log
+
+# --- IDEA & VS Code ---
+.idea/
+*.iml
+.vscode/
+*.suo
+*.ntvs
+*.njsproj
+
+# --- Java / Maven ---
+target/
+*.class
+
+# --- Node / Vue ---
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env.local
