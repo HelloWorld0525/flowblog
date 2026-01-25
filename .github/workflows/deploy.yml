@@ -69,7 +69,11 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: |
-          # 强制重命名，确保脚本能找到
+          # 1. 先强制删除旧的 jar 包，防止 mv 报错
+          rm -f /home/flowblog/blog-backend/flowblog.jar
+          
+          # 2. 再把新上传的 jar 包重命名
           mv /home/flowblog/blog-backend/*.jar /home/flowblog/blog-backend/flowblog.jar
-          # 执行重启
+          
+          # 3. 执行修复过格式的重启脚本
           sh /home/flowblog/restart.sh
