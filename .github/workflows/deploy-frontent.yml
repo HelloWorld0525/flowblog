@@ -1,0 +1,36 @@
+name: Deploy Frontend (Vue)
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'blog-frontend/**' # 🟢 只有改了前端文件才触发
+
+jobs:
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # 1. 构建 Vue
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22' # 保持和你本地一致
+
+      - name: Build Frontend
+        run: |
+          cd blog-frontend
+          npm install
+          npm run build
+
+      # 2. 传输静态文件 (直达 Nginx 目录)
+      - name: Deploy to Nginx
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          source: "blog-frontend/dist/*"
+          target: "/home/flowblog/blog-frontend"
+          strip_components: 2

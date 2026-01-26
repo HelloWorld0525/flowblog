@@ -105,7 +105,7 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1>Flow State.</h1>
-          <p>代码如水，生活有律。<br>这里是 Flow - Z.H.X 的Blog。</p>
+          <p>主软，还在慢慢的学习硬件，立志做一个全栈工程师。<br>这里没有黑魔法，所有的东西只不过是我现在不知道而已，总有一天，我会把所有的细节，所有的内部的东西全都搞明白的。</p>
         </div>
         <div class="blob-image"></div>
       </div>
