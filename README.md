@@ -8,7 +8,11 @@
 ![GitHub Actions](https://img.shields.io/badge/CI%2FCD-Automated-2088FF)
 
 > 一个基于 **Spring Boot + Vue 3** 前后端分离架构开发的个人博客系统。
-> 特色在于采用了 **GitHub Actions + Linux Native (原生)** 的自动化部署方案，在低配服务器上实现了高性能、低内存占用的持续集成交付。👉 [点击查看为什么我选择这个部署架构](docs/deployment-why.md)
+> 特色在于采用了 **GitHub Actions + Linux Native (原生)** 的自动化部署方案，在低配服务器上实现了高性能、低内存占用的持续集成交付。
+>
+> 👉 [点击查看为什么我选择这个部署架构](docs/deployment-why.md)
+>
+> 👉[备份迁移](docs/备份迁移.md)
 >
 > 成果展示：[flowblog.top](https://flowblog.top/)
 
